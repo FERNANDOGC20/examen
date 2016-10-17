@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>examen</title>
+  <link rel="stylesheet" href="estilo.css">
+  <nav>
+  	<ul>
+  		<li>calificaciones</li>
+  	</ul>
+  </nav>
 </head>
 <body>
  <table>
@@ -52,10 +58,10 @@ while($campos=mysql_fetch_array($resultado)){
 ?>
   <tr>
     <td><?php echo $campos['id_pregunta'];?></td>
-    <td><?php echo $campos['A'];?></td>
-    <td><?php echo $campos['B'];?></td>
-    <td><?php echo $campos['C'];?></td>
-    <td><?php echo $campos['D'];?></td>
+    <td><?php echo $campos['A'];?><input type="radio" id="A"></td>
+    <td><?php echo $campos['B'];?><input type="radio" id="B"></td>
+    <td><?php echo $campos['C'];?><input type="radio" id="C"></td>
+    <td><?php echo $campos['D'];?><input type="radio" id="D"></td>
   </tr>
 <?php
   }
@@ -65,4 +71,5 @@ while($campos=mysql_fetch_array($resultado)){
  </section> 
 </body>
 <script src="jquery.js"></script>
+<script type="text/javascript" src="codigo.js"></script>
 </html>
